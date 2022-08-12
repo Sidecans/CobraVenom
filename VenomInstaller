@@ -1,0 +1,6 @@
+import os
+import shutil
+login = str(os.getlogin())
+loc = "C:\\Users\\" + login + "\\"
+if os.path.exists(mp + "SSS"):
+  os.mkdir(mp + "SSS")
