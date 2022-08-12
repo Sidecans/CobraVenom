@@ -28,7 +28,10 @@ class Lexer:
         tokens = []
         while self.current_char != None:
             if self.current_char in '\t':
-                pass
+                self.advance()
+            elif self.current_char == "+":
+                tokens.append(Token(TYP_PLUS))
+                self.advance()
         return tokens
     
         
