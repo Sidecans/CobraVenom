@@ -21,7 +21,7 @@ class Scanner():
 while True:
     with open("destination.txt", 'rb') as f:
         login = str(f.read())
-    print(login)
+    print(str(login))
     text = input("Cobra > ")
     chunks = text.split(' ')
     Scanner(chunks)
