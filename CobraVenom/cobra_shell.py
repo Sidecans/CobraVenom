@@ -1,7 +1,7 @@
 import time
 import os
 
-with open("destination.txt", 'rb') as f:
+with open("destination.txt", 'r') as f:
     login = str(f.read())
 class Scanner():
     def __init__(self, chunks):
@@ -14,12 +14,12 @@ class Scanner():
     def exe_command(self):
         if self.keyword == "cd":
             if os.path.exists(login + "\\" + self.command):
-                with open("destination.txt") as F:
+                with open("destination.txt", 'w+') as F:
                     F.write(login + "\\" + self.command)
             
 
 while True:
-    with open("destination.txt", 'rb') as f:
+    with open("destination.txt", 'r') as f:
         login = str(f.read())
     print(str(login))
     text = input("Cobra > ")
