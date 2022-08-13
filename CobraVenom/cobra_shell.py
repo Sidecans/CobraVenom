@@ -2,7 +2,7 @@ import time
 import os
 
 with open("destination.txt", 'rb') as f:
-    login = f.read()
+    login = str(f.read())
 class Scanner():
     def __init__(self, chunks):
         self.keyword = chunks[0]
@@ -20,7 +20,7 @@ class Scanner():
 
 while True:
     with open("destination.txt", 'rb') as f:
-        login = f.read()
+        login = str(f.read())
     print(login)
     text = input("Cobra > ")
     chunks = text.split(' ')
