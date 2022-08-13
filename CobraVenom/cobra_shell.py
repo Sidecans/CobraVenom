@@ -18,6 +18,9 @@ class Scanner():
             if os.path.exists(login + "\\" + self.command):
                 with open("destination.txt", 'w+') as F:
                     F.write(login + "\\" + self.command)
+        elif self.keyword == "mkdir":
+            if os.path.exists(login + "\\" + self.command) == False:
+                os.mkdir(self.command)
         else:
             print("Error: Errno[2]: Unkown Command")
     def exception(self):
