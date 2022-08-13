@@ -25,8 +25,7 @@ while True:
     text = input("Cobra > ")
     chunks = text.split(' ')
     Scanner(chunks)
-    time.sleep(5)
-    os.system('cls')
+
     
     
     
