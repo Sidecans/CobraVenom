@@ -1,10 +1,16 @@
 import time
 import os
-
+import cobra_interpreter as Cobra
+import venom_interpreter as Venom
+import cobra_venom_interpreter as CobraVenom
 with open("destination.txt", 'r') as f:
     login = str(f.read())
 class Scanner():
     def __init__(self, chunks):
+        try:
+            self.mode = chunks[2]
+        except:
+            pass
         self.keyword = chunks[0]
         self.exception()
         try:    
@@ -21,6 +27,12 @@ class Scanner():
         elif self.keyword == "mkdir":
             if os.path.exists(login + "\\" + self.command) == False:
                 os.mkdir(self.command)
+        elif self.keyword == "run":
+            if os.path.exists(login + "\\" + self.command) == True:
+                if self.mode.lower() == "cobra":
+                    Cobra.run(login + "\\" + self.command)
+            else:
+                print("Error: Errno[3]: Location Not Found")
         else:
             print("Error: Errno[2]: Unkown Command")
     def exception(self):
