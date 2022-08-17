@@ -46,7 +46,8 @@ class Scanner():
             os.system('cls')
             cobra_shell()
         elif self.keyword == "dfltdir":
-            with open("destination.txt", 'wb') as f:
+            with open("destination.txt", 'w+') as f:
+
                 f.write("C:\\Users")
 def cobra_shell():
     with open("destination.txt", 'r') as f:
@@ -54,7 +55,7 @@ def cobra_shell():
     print(str(login))
     text = input("Cobra > ")
     chunks = text.split(' ')
-    Scanner(chunks)
+    new = Scanner(chunks)
 while True:
     cobra_shell()
 
