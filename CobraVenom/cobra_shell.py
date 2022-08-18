@@ -5,7 +5,7 @@ import venom_interpreter as Venom
 import cobra_venom_interpreter as CobraVenom
 with open("destination.txt", 'r') as f:
     login = str(f.read())
-class Scanner():
+class Scanner:
     def __init__(self, chunks):
         try:
             self.mode = chunks[2]
