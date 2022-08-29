@@ -18,6 +18,7 @@ def runC(file):
             pass
         count += 1
         total_lines = count
+        Scan.setup()
         for x in range(1, total_lines):
             lin = f.readline(x)
             Scan.readline(lin)

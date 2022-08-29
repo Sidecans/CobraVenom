@@ -17,8 +17,11 @@ class Scanner():
             
             token = chunks[2]
             Place = token.split(":")
-                
-            
+            if len(Place) == 2:
+                pass
+            else:
+                print("Error: Errno [7]: Type:Value not Provided")    
+            self.var[]
             # self.var[chunks[1]] 
     def setup(self):
         self.var = dict()

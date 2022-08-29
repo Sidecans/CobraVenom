@@ -3,6 +3,8 @@ class Scanner():
         pass
     def readline(self, lin):
         chunks = lin.split(' ')
+    def setup(self):
+        pass
         
             
 
