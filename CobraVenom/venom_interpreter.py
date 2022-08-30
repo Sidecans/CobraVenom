@@ -9,6 +9,7 @@ class Scanner():
                 del temp
             except:
                 print("Error: Errno [6]: Name of Variable not Provided")
+
             try:
                 temp = chunks[2]
                 del temp
@@ -21,8 +22,17 @@ class Scanner():
                 pass
             else:
                 print("Error: Errno [7]: Type:Value not Provided")    
-            self.var[]
-            # self.var[chunks[1]] 
+
+            if Place[0] == "str":
+                self.var[] = str(Place[1])
+        
+        if chunks[0] == "print":
+            try:
+                temp = chunks[1]
+                del temp
+            except:
+                print("Error: Errno [8]: Name of Variable not Provided")
+
     def setup(self):
         self.var = dict()
 
