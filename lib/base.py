@@ -4,7 +4,7 @@ from cobra_venom_interpreter import Scanner as CobraVenom
 
 def runC(file):
     extensi = file.split(".")
-    extens = extens[1]
+    extens = extensi[1]
     if extens == "CodeCobra":
         Scan = Cobra()
     elif extens == "CodeVenom":

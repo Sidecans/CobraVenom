@@ -49,5 +49,6 @@ class Scanner():
                 print(self.var[Place[1]])
     def setup(self):
         self.var = dict()
+        
 
         
