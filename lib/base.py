@@ -21,5 +21,5 @@ def runC(file):
         Scan.setup()
         for x in range(1, total_lines):
             lin = f.readline(x)
-            Scan.readline(lin)
+            Scan.readline(lin, total_lines)
         
