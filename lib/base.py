@@ -14,7 +14,7 @@ def runC(file):
     else:
         print("Error: Errno[5]: Invalid File Extension")
         input("Press [Enter]")
-    with open(file, 'r') as f:
+    with open(file, 'r+') as f:
         for count, line in enumerate(f):
             pass
         count += 1
